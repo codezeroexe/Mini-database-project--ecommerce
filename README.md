@@ -1,7 +1,6 @@
 # Mini-database-project--ecommerce
-Project Title: E-commerce Database System 🛍️
 Project Overview
-This project is a mini database system for an e-commerce platform. It demonstrates key database concepts like relational design, data normalization, and SQL querying. The system manages core business functions, including customer information, product catalogs, order tracking, and payments. The ER diagram provided visually represents the relationships between these entities.
+This project is a mini database system designed for an e-commerce platform. It demonstrates key database concepts like relational design, data normalization, and SQL querying. The system manages core business functions, including customer information, product catalogs, order tracking, and payments. The ER diagram provided visually represents the relationships between these entities.
 
 Database Design 📐
 The database schema is structured around five main tables:
@@ -27,11 +26,14 @@ INSERT Statements: The script populates the tables with at least 20 rows of samp
 
 The script also contains several example queries that address common business questions:
 
-List all customers and their orders: This query joins the customer and order tables to provide a complete view of all orders placed, along with the customer's name.
+List all customers: A basic query to retrieve all customer details from the customer table.
 
-Show items in a specific order: This query uses a JOIN between orderitem and product to list all the items within a given order, including their names and quantities.
+List all products: A basic query to retrieve all product details from the product table.
 
-Display payment details: This query retrieves payment information, linking it to the corresponding order and customer to show who made which payment.
+Show all orders with customer names: This query joins the order and customer tables to provide a complete view of all orders placed, along with the customer's name, which isn't available in the order table alone.
+
+Show all items in a specific order (e.g., orderid = 1): This query uses a JOIN between orderitem and product to list all the items within a given order, including their names and quantities. This is essential for viewing the contents of a particular order.
+
+Show all payments and their status: This query demonstrates a multi-table JOIN by linking the payment, order, and customer tables. It retrieves comprehensive payment information, including the customer's name and the corresponding order ID. This is a common business query for financial tracking.
 
 These queries demonstrate the ability to retrieve and combine data from multiple tables, which is a core skill for database management.
-
